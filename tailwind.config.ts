@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        roboto : ['Roboto','sans'],
+        poppins: ['Poppins','sans'],
+        inter: ['Inter','sans']
+      }
     },
   },
   plugins: [],
