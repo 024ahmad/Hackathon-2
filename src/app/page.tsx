@@ -3,6 +3,7 @@ import {Poppins} from 'next/font/google';
 import {Inter} from 'next/font/google';
 import Header from './components/Header';
 import Footer from "./components/footer"
+import Hero from './components/hero';
 
 // import Cards from './components/Card';
 // import Image1 from "./pics/Image1.png"
@@ -31,9 +32,13 @@ const inter = Inter({
 export default function Home () {
   return (
     // h-[5925.36px]
-        <div className='w-[1440px] h-auto text-[#111111] border-[2px] border-red-700 absolute top-10 left-10'>
-      <Header />
-      <Footer />
+    // h-auto
+      <div className='w-[1440px] h-[5925.36px] bg-[#F5F5F5]  text-[#111111]  absolute top-10 left-10'>
+        <Header />
+
+        <Footer />
+
+        <Hero />
     </div>
   )
 }

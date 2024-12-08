@@ -14,8 +14,8 @@ import { BsBag } from "react-icons/bs";
 
 export default function Header (){
     return (
-        <div className="flex flex-col w-[1440px] h-[96px] font-medium text-[11px] leading-[14px]">
-            <div id="navbar" className="flex w-[1440px] h-9  bg-[#F5F5F5]">
+        <div className="flex flex-col w-[1440px] h-[96px] font-medium text-[11px] leading-[14px] border-[1px] border-transparent  hover:border-[1px] hover:border-black">
+            <div id="navbar" className="flex w-[1440px] h-9 bg-[#F5F5F5]">
                 <div id="1" className="w-6 h-6 absolute top-[6px] left-12 hover:border-[1px] border-black">
                     <Image src={Image1} alt="logo1"></Image>
                 </div>
@@ -39,11 +39,7 @@ export default function Header (){
                     </div>
                     
                 </div>
-
-
             </div>
-
-
 
             <div id="header" className="flex items-center w-[1440px] h-[60px] absolute top-9 bg-[#FFFFFF] ">
                 <div className="flex w-[760px] h-[60px] absolute top-1 left-[340px] text-[15px] leading-6 ">
@@ -78,11 +74,11 @@ export default function Header (){
                     </div>
 
                     <div id="3" className="flex items-center justify-center w-[84px] h-[60px] absolute left-[1318px] py-3 gap-3 ">
-                        <div className="flex items-center justify-center w-9 h-9 rounded-[50px] hover:border-[1px] border-black">
+                        <div className="flex items-center justify-center w-9 h-9 rounded-[5px] hover:border-[1px] border-black">
                         <MdOutlineFavoriteBorder className="w-9 h-9 text-[10px]"/>
                         </div>
-                        <div className="flex items-center justify-center w-9 h-9 rounded-[50px] hover:border-[1px] border-black">
-                        <BsBag className="w-8 h-8 text-black" />
+                        <div className="flex items-center justify-center w-9 h-9 rounded-[5px] hover:border-[1px] border-black">
+                        <BsBag className="w-9 h-7 text-black" />
                         </div>
                     </div>
                 </div>
