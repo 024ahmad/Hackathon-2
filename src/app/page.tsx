@@ -1,6 +1,7 @@
-import { Roboto } from 'next/font/google';
-import {Poppins} from 'next/font/google';
-import {Inter} from 'next/font/google';
+// import { Roboto } from 'next/font/google';
+// import {Poppins} from 'next/font/google';
+// import {Inter} from 'next/font/google';
+
 import Header from './components/Header';
 import Footer from "./components/footer"
 import Hero from './components/hero';
@@ -10,23 +11,23 @@ import Hero from './components/hero';
 // import Image2 from "./pics/Image2.png"
 
 
-const roboto = Roboto({
-  subsets: ['latin'], 
-  weight: ['100', '300', '400', '500', '700', '900'],
-  style: ['normal', 'italic']
-})
+// const roboto = Roboto({
+//   subsets: ['latin'], 
+//   weight: ['100', '300', '400', '500', '700', '900'],
+//   style: ['normal', 'italic']
+// })
 
-const poppins = Poppins({
-  subsets: ['latin'], 
-  weight: ['100', '300', '400', '500', '700', '900'],
-  style: ['normal', 'italic']
-});
+// const poppins = Poppins({
+//   subsets: ['latin'], 
+//   weight: ['100', '300', '400', '500', '700', '900'],
+//   style: ['normal', 'italic']
+// });
 
-const inter = Inter({
-  subsets: ['latin'], 
-  weight: ['100', '300', '400', '500', '700', '900'],
-  style: ['normal', 'italic']
-});
+// const inter = Inter({
+//   subsets: ['latin'], 
+//   weight: ['100', '300', '400', '500', '700', '900'],
+//   style: ['normal', 'italic']
+// });
 
 
 export default function Home () {
