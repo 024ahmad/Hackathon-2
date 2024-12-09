@@ -6,7 +6,7 @@ import Image1 from "../pics/hero/Image1.png"
 
 export default function Hero () {
     return (
-        <div className="w-auto h-auto absolute font-medium text-[#111111] leading-6  border-[1px] border-black">
+        <div className="w-auto h-auto absolute font-medium text-[#111111] leading-6 border-[1px] border-black">
             {/* Heading div */}
             <div id="heading" className="flex flex-col items-center w-[1440px] h-[58px] absolute ">
                 <p className="flex items-center w-[106px] h-[17px] absolute top-2 left-[667px] text-[15px] leading-4 ">Hello Nike App</p>

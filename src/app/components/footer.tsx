@@ -68,7 +68,6 @@ export default function Footer () {
                     <div id="4" className="flex items-center justify-center h-[30px] w-[30px] absolute left-[307px] rounded-full bg-[#7E7E7E] hover:border-[1px] border-white">
                         <ImInstagram className="text-black w-[16px] h-[20px]"/>
                     </div>
-                    
                 </div>
             </div>
 
