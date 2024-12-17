@@ -1,32 +1,38 @@
 
-import Header from "./components/Header";
+// Components
+
 import Hero from './components/hero';
-import Footer from "./components/footer"
 import Shoes from "./components/Shoes";
 import Featured from "./components/featured";
 import Gear from "./components/GearUp";
+import Flight from "./components/Flight";
+import Essential from "./components/Essential";
+import Footer from "./components/footer"
+
+import  Category  from "./components/Category";
+
+
 
 export default function Home () {
   return (
-    <div className="absolute top-10 left-10 font-medium">
-      {/* Header Component */}
-      <Header />
+    <div className="absolute top-10 left-10 border-[2px] border-red-800 font-medium">
+      {/* Components */}
+      
+      <Hero />
 
-      {/* Hero Component */}
-      <Hero/>
+      <Shoes/>
 
-      {/* Shoes Component */}
-      <Shoes />
+      <Featured/>
 
-      {/* Featured Component */}
-      <Featured />
+      <Gear/>
 
-      {/* GearUp Component */}
-      <Gear />
+      <Flight/>
 
-      {/* Footer Component */}
+      <Essential />
+
+      <Category />
+
       <Footer />
-
     </div>
   )
 }
