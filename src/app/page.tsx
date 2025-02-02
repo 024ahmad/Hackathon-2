@@ -5,9 +5,10 @@ import Shoes from "./components/Shoes";
 import Featured from "./components/Featured";
 import GearUp from "./components/GearUp";
 import Flight from "./components/Flight";
-import Category from "./components/Catergories";
-import Essential from "./components/Essentials";
+import Categories from "./components/Categories"
+import Essentials from "./components/Essentials";
 import Footer from "./components/Footer";
+
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,9 +26,9 @@ export default function Home() {
 
       <Flight />
 
-      <Essential />
+      <Essentials />
 
-      <Category />
+      <Categories />
 
       <Footer />
     </div>
