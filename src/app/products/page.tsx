@@ -45,7 +45,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 export default function Products() {
   return (
-    <div className="flex flex-col justify-center w-[1440px] h-auto absolute top-[156px] text-[15px] font-medium leading-[21px] border-[1px] border-transparent hove:border-[1px] hover:border-black">
+    <div className="flex flex-col justify-center w-[1440px] h-auto absolute top-[156px] text-[15px] font-medium leading-[21px] ">
       {/* Filter Div */}
 
       <div className="flex justify-between items-center px-4 w-[1440px] h-[51px] ">

@@ -12,10 +12,12 @@ import Footer from "./components/footer"
 import  Category  from "./components/Category";
 
 
+// Updated
 
 export default function Home () {
   return (
     <div className="absolute top-10 left-10 border-[2px] border-red-800 font-medium">
+
       {/* Components */}
       
       <Hero />
