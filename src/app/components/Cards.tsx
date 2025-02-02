@@ -1,36 +1,42 @@
+import React from "react";
 import Image from "next/image";
 
-const Cards = ({
+interface CardTypes {
+  imageSrc: string;
+  title: string;
+  category: string;
+  price: number;
+  width?: number; 
+  height?: number;
+}
+
+const ShoesCard: React.FC<CardTypes> = ({
   imageSrc,
   title,
   category,
-  color,
   price,
-}: {
-  imageSrc: any;
-  title: string;
-  category: string;
-  color: string;
-  price: number;
+  width = 441,
+  height = 441,
 }) => {
   return (
-    <div className="flex flex-col justify-evenly items-start w-[348px] h-[533px] mb-4 text-[15px] leading-6 font-normal group ">
+    <div className="p-1 cursor-pointer group">
       <Image
         src={imageSrc}
-        alt="logo"
-        className="transition-transform duration-300 group-hover:scale-110 "
-      ></Image>
-      <div className="flex flex-col items-start justify-evenly h-full">
-        <p className="text-[#9E3500] font-medium text-[15px] leading-7">
-          Just In
-        </p>
-        <h3 className="font-medium">{title}</h3>
-        <p className="text-[#757575] font-normal">{category}</p>
-        <p className="text-[#757575] font-normal">{color}</p>
-        <p className="leading-7">MRP : ₹ {price}</p>
+        alt="Shoes1"
+        width={width}
+        height={height}
+        className="flex items-center rounded-md object-cover transform scale-100 group-hover:scale-110 transition duration-300 ease-in-out "
+      />
+      <div className="flex flex-col items-center md:flex md:flex-row md:justify-between mt-2">
+        <div className="gap-1 flex flex-col items-center md:items-start ">
+          <h3>{title}</h3>
+          <p className="text-[#757575] font-normal">{category}</p>
+        </div>
+        <p>₹ {price}</p>
       </div>
     </div>
   );
 };
 
-export default Cards;
+export default ShoesCard;
+

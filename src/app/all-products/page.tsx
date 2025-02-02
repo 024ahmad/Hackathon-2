@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Footer from "../components/footer";
 
 // Icons and Images
 
@@ -31,11 +30,10 @@ const AllProducts = () => {
       <div className='w-full h-full sm:w-[260px] grid grid-cols-1 sm:grid-cols-2  border-[2px] border-black'>
         <div className='w-full sm:w-[192px] border-[1px] border-yellow-600'></div>
 
-        <div className='flex justify-center w-[11px] h-auto sm:h-[849px] border-[1px] border-cyan-600 absolute left-[249px]'>
+        <div className='flex justify-center w-[11px] h-auto sm:h-[849px]  absolute left-[249px]'>
           <div className='w-[7px] h-[329px] opacity-50 bg-[#000000]'></div>
         </div>
       </div>
-      <Footer/>
     </div>
   )
 }

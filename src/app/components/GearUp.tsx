@@ -1,142 +1,107 @@
-// React Icon
+import React from "react";
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
+import ShoesCard from "./Cards";
 
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+const gearUpArray = [
+  {
+    id: 1,
+    imageSrc: "/gearup/Image1.png",
+    title: "Nike Air Max Pulse",
+    category: "Women's Shoes",
+    price: 13995,
+    width: 300,
+    height: 300,
+  },
+  {
+    id: 2,
+    imageSrc: "/gearup/Image2.png",
+    title: "Nike Air Max Pulse",
+    category: "Men's Shoes",
+    price: 13995,
+    width: 300,
+    height: 300,
+  },
+  {
+    id: 3,
+    imageSrc: "/gearup/Image3.png",
+    title: "Nike Air Max 97 SE",
+    category: "Men's Shoes",
+    price: 16995,
+    width: 300,
+    height: 300,
+  },
+  {
+    id: 4,
+    imageSrc: "/gearup/Image4.png",
+    title: "Nike Air Max 97 SE",
+    category: "Men's Shoes",
+    price: 16995,
+    width: 300,
+    height: 300,
+  },
+];
 
-import Image from "next/image";
-
-import Image1 from "../pics/gearup/Image1.png";
-import Image2 from "../pics/gearup/Image2.png";
-import Image3 from "../pics/gearup/Image3.png";
-import Image4 from "../pics/gearup/Image4.png";
-
-export default function Gear() {
+export default function GearUp() {
   return (
-    <div className="flex w-[1344px] h-[561px] absolute top-[2868px] left-[48px] text-black  ">
+    <div className="container mx-auto mt-20 flex flex-col gap-4 text-black ">
       {/* Text */}
-      <p className="w-[90px] h-[27px] text-[23px] leading-7">Gear Up</p>
-
+      <p className="text-center md:text-start text-[23px] leading-7 font-medium">
+        Gear Up
+      </p>
       {/* Products */}
-      <div className="flex w-[1354px] h-[509px] absolute top-[52px] black ">
-        <div id="1" className="flex w-[666px] h-[509px] ">
-          {/* Scroll */}
-          <div className="flex items-center w-[211px] h-[48px] absolute top-[2px] left-[407px]  ">
-            <p className="w-[83px] h-[24px] absolute top-[12px] left-[7px] text-[15px] leading-6">
-              Shop Men's
-            </p>
-            <div
-              className="flex justify-center items-center w-12 h-12
-                        absolute left-[103px] rounded-[24px] bg-[#F5F5F5] hover:bg-gray-700"
-            >
-              <IoIosArrowBack className="text-[#CCCCCC] w-[24px] h-[24px]" />
+      <div className="grid grid-col-1 md:grid-cols-2 gap-1 ">
+        <div id="frame1" className="flex flex-col flex-wrap items-end gap-2 ">
+          {/* {Scroll} */}
+          <div className="flex gap-3 items-center mr-10">
+            <p>Shop Men's</p>
+            <div className="bg-[#F5F5F5] flex items-center justify-center w-12 h-12 text-5xl  text-[#CCCCCC] rounded-[24px]">
+              <RiArrowDropLeftLine className="hover:bg-gray-600 hover:text-white rounded-[24px] cursor-pointer" />
             </div>
-            <div className="flex justify-center items-center w-12 h-12 absolute left-[163px] rounded-[24px] bg-[#E5E5E5] hover:bg-gray-700">
-              <IoIosArrowForward className="text-[#CCCCCC] w-[24px] h-[24px]" />
+            <div className="bg-[#E5E5E5] flex items-center justify-center w-12 h-12 text-5xl rounded-[24px]">
+              <RiArrowDropRightLine className="hover:bg-gray-500 hover:text-white rounded-[24px] cursor-pointer" />
             </div>
           </div>
-          {/* Desing */}
-          <div
-            id="main1"
-            className="flex w-[666px] h-[407px] absolute top-[62px] "
-          >
-            <div
-              id="1"
-              className="w-[300px] h-[393px] absolute left-[48px] border-[1px] border-tranparent hover:border-[1px] hover:border-black "
-            >
-              <Image src={Image1} alt="1"></Image>
-              <div className="flex w-[284px] h-[72] absolute top-[321px]">
-                <div className="w-[231px] pr-[12px]">
-                  <p className="w-[219px] h-6 text-[15px]">
-                    Nike Dri-FIT ADV TechKnit Ultra
-                  </p>
-                  <p className="w-[203px] h-12 text-[16px] text-[#757575]">
-                    Men's Short-Sleeve Running Top
-                  </p>
-                </div>
-                <p className="w-[62px] h-[17px] absolute top-[3px] left-[231px] text-[15px]">
-                  ₹ 13 995
-                </p>
+          {/* Dressing */}
+          <div className="grid grid-col-1 items-center sm:grid-cols-2 ml-10 mb-10">
+            {gearUpArray.slice(0, 2).map((item, key) => (
+              <div key={item.id}>
+                <ShoesCard
+                  imageSrc={item.imageSrc}
+                  title={item.title}
+                  category={item.category}
+                  price={item.price}
+                  width={item.width}
+                  height={item.height}
+                />
               </div>
-            </div>
-            <div
-              id="2"
-              className="w-[300px] h-[393px] absolute left-[360px] border-[1px] border-tranparent hover:border-[1px] hover:border-black "
-            >
-              <Image src={Image2} alt="Shoes1"></Image>
-              <div className="flex w-[284px] h-[72] absolute top-[321px]">
-                <div className="w-[221px] pr-[31px] ">
-                  <p className="w-[162px] h-6 text-[15px]">
-                    Nike Dri-FIT Challenger
-                  </p>
-                  <p className="w-[199px] h-12 text-[16px] text-[#757575]">
-                    Men's 18cm (approx.) 2-in-1 Versatile Shorts
-                  </p>
-                </div>
-                <p className="w-[68px] h-[17px] absolute top-[3px] left-[221px] text-[15px] ">
-                  ₹ 2 4955
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-
-        <div id="2" className="flex w-[666px] h-[509px] absolute left-[684px]">
-          {/* Scroll */}
-          <div className="flex items-center w-[234px] h-[48px] absolute top-[2px] left-[383px]">
-            <p className="w-[106px] h-[24px] absolute top-[12px] left-[7px] text-[15px] leading-6">
-              Shop Women's
-            </p>
-            <div
-              className="flex justify-center items-center w-12 h-12
-                        absolute left-[126px] rounded-[24px] bg-[#F5F5F5] hover:bg-gray-700"
-            >
-              <IoIosArrowBack className="text-[#CCCCCC] w-[24px] h-[24px]" />
+        <div id="frame2 " className="flex flex-col items-end gap-2">
+          {/* {Scroll} */}
+          <div className="flex gap-3 items-center mr-10">
+            <p>Shop Womes's</p>
+            <div className="bg-[#F5F5F5] flex items-center justify-center w-12 h-12 text-5xl  text-[#CCCCCC] rounded-[24px]">
+              <RiArrowDropLeftLine className="hover:bg-gray-600 hover:text-white rounded-[24px] cursor-pointer" />
             </div>
-            <div className="flex justify-center items-center w-12 h-12 absolute left-[186px] rounded-[24px] bg-[#E5E5E5] hover:bg-gray-700">
-              <IoIosArrowForward className="text-[#CCCCCC] w-[24px] h-[24px]" />
+            <div className="bg-[#E5E5E5] flex items-center justify-center w-12 h-12 text-5xl rounded-[24px]">
+              <RiArrowDropRightLine className="hover:bg-gray-500 hover:text-white rounded-[24px] cursor-pointer" />
             </div>
           </div>
-          {/* Desing */}
-          <div
-            id="main2"
-            className="flex w-[666px] h-[447px] absolute top-[62px] "
-          >
-            <div
-              id="1"
-              className="w-[300px] h-[393px] absolute left-[48px] border-[1px] border-tranparent hover:border-[1px] hover:border-black "
-            >
-              <Image src={Image3} alt="1"></Image>
-              <div className="flex w-[284px] h-[72] absolute top-[321px]">
-                <div className="w-[231px] pr-[12px]">
-                  <p className="w-[208px] h-6 text-[15px]">
-                    Nike Dri-FIT ADV Run Division
-                  </p>
-                  <p className="w-[224px] h-12 text-[16px] text-[#757575]">
-                    Women's Long-Sleeve Running Top
-                  </p>
-                </div>
-                <p className="w-[62px] h-[17px] absolute top-[3px] left-[231px] text-[15px]">
-                  ₹ 5 295
-                </p>
+          {/* Dressing */}
+          <div className="flex ml-10 mb-10">
+            {gearUpArray.slice(2, 5).map((item, key) => (
+              <div key={item.id} className="flex justify-center">
+                <ShoesCard
+                  imageSrc={item.imageSrc}
+                  title={item.title}
+                  category={item.category}
+                  price={item.price}
+                  width={item.width}
+                  height={item.height}
+                />
               </div>
-            </div>
-            <div
-              id="2"
-              className="w-[300px] h-[393px] absolute left-[360px] border-[1px] border-tranparent hover:border-[1px] hover:border-black "
-            >
-              <Image src={Image4} alt="Shoes1"></Image>
-              <div className="flex w-[284px] h-[72] absolute top-[321px]">
-                <div className="w-[231px] pr-[72px] ">
-                  <p className="w-[66px] h-6 text-[15px]">Nike Fast</p>
-                  <p className="w-[224px] h-12 text-[16px] font-normal text-[#757575]">
-                    Women's Mid-Rise 7/8 Running Leggings with Pockets
-                  </p>
-                </div>
-                <p className="w-[68px] h-[17px] absolute top-[3px] left-[231px] text-[15px] ">
-                  ₹ 3 795
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

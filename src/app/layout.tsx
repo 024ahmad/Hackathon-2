@@ -5,6 +5,7 @@ import "./globals.css";
 // My Components
 
 import Header from "./components/Header";
+// import Footer from "./components/Footer";
 
 
 const geistSans = localFont({
@@ -35,6 +36,7 @@ export default function RootLayout({
       >
         <Header/>
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   );
