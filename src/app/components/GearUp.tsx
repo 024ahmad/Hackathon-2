@@ -2,6 +2,8 @@ import React from "react";
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
 import ShoesCard from "./Cards";
 
+// Array
+
 const gearUpArray = [
   {
     id: 1,
