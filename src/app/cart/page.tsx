@@ -5,8 +5,9 @@
 
 // import Frame1 from "../pics/cart/Frame1.png"
 
-// const Cart = () => {
-//   return (
+ const Cart = () => {
+   return (
+    <div></div>
 //     <div className='w-[1100px] h-[632px] absolute top-[136px] left-[155px] border-[1px] border-trasparent hover:border-[1px] hover:border-black'>
 //         <div className='flex items-start justify-between w-full h-[547px]'>
 
@@ -146,9 +147,9 @@
 
 //         </div>
 //     </div>
-//   )
-// }
+   )
+ }
 
-// export default Cart
+ export default Cart
 
 
