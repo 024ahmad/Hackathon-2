@@ -2,90 +2,71 @@ import React from "react";
 import Image from "next/image";
 
 // Images
-
 import Logo from "../pics/login/logo.png";
+import Link from "next/link";
 
 const Login = () => {
   return (
-    <div className="w-[380px] h-[489px] absolute top-[99px] left-[530px] border-[1px] border-transparent hover:border-[1px] border-black">
-      {/* Title */}
+    <div className="flex items-center mt-10 justify-center min-h-screen px-4">
+      <div className="w-full max-w-sm md:max-w-md lg:w-[380px] h-auto md:h-[489px] p-6 md:p-8 bg-white border border-transparent hover:border-black rounded-md shadow-lg">
+        {/* Title */}
+        <div className="text-center">
+          {/* Logo */}
+          <div className="flex justify-center">
+            <Image src={Logo} alt="logo" />
+          </div>
 
-      <div className="w-[324px] h-[128px] relative top-[28px] left-[28px] ">
-        {/* logo */}
-
-        <div className="w-[324px] h-[17px]">
-          <Image src={Logo} alt="logo"></Image>
+          {/* Title */}
+          <h3 className="mt-6 font-bold text-[18px] leading-[26px]">
+            YOUR ACCOUNT FOR EVERYTHING NIKE
+          </h3>
         </div>
 
-        {/* Title */}
-
-        <h3 className="w-[166px] h-[57px] text-center relative top-[26px] left-[78px] font-bold text-[18px] leading-[26px]">
-          YOUR ACCOUNT FOR EVERYTHING NIKE
-        </h3>
-      </div>
-
-      {/* Form */}
-
-      <form className="w-[324px] h-[305px] absolute top-[156px] left-[28px]">
-        {/* Email */}
-        <div className="h-[40px] relative top-[5px] rounded-[3px] ">
+        {/* Form */}
+        <form className="mt-6 space-y-4">
+          {/* Email */}
           <input
             type="text"
             placeholder="Email Address"
-            className="w-[290px] h-[40px] absolute top-[12px] left-[17px] text-black"
+            className="w-full px-4 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
-        </div>
 
-        {/* Password */}
-
-        <div className="w-full h-[40px] absolute top-[58px] rounded-[3px] ">
+          {/* Password */}
           <input
-            type="text"
+            type="password"
             placeholder="Password"
-            className="w-[290px] h-[40px] absolute top-[12px] left-[17px] text-black"
+            className="w-full px-4 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
-        </div>
 
-        {/* Checkbox */}
+          {/* Checkbox */}
+          <div className="flex items-center">
+            <input type="checkbox" className="w-4 h-4" />
+            <p className="ml-2 text-sm text-gray-500">Keep me signed in</p>
+          </div>
 
-        <div className="flex items-center w-[162px] h-[20px] absolute top-[121px] rounded-[3px] ">
-          <input type="checkbox" className="w-[20px] h-[20px] rounded-[3px]" />
-          <p className="w-[99px] absolute left-[34px] text-[12px] leading-[12px] text-[#8D8D8D]">
-            Keep me signed in
+          {/* Terms */}
+          <p className="text-xs text-gray-500 text-center">
+            By logging in, you agree to Nike's Privacy Policy and
+            <span className="underline cursor-pointer"> Terms of Use.</span>
           </p>
-        </div>
 
-        {/* Terms */}
-
-        <div className="flex justify-center w-[324px] h-[59px] absolute top-[162px] text-[#8D8D8D] ">
-          <p className="w-[269px] text-[12px] leading-[16px]">
-            By logging in, you agree to Nike's Privacy Policy and{" "}
-            <span className="underline underline-offset-2 hover:cursor-pointer">
-              {" "}
-              Terms of Use.
-            </span>
-          </p>
-        </div>
-
-        {/* Button */}
-
-        <div className=" absolute top-[226px] w-[324px] h-[40px] flex items-center justify-center hover:cursor-pointer hover:bg-gray-500 rounded-[3px] bg-[#000000]">
-          <button className="text-[11px] leading-[17px] text-white text-center">
+          {/* Button */}
+          <button
+            type="submit"
+            className="w-full py-2 text-white bg-black rounded-md hover:bg-gray-700"
+          >
             SIGN IN
           </button>
-        </div>
 
-        {/* Join Us */}
-
-        <div className="absolute top-[276px] w-[324px] h-[24px] flex items-center justify-center text-[#8D8D8D]">
-          <p>
-            Not a Member? Join Us.{" "}
-            <span className="text-black underline underline-offset-2 hover:cursor-pointer">
-              Join Us.
-            </span>{" "}
+          {/* Join Us */}
+          <p className="text-center text-sm text-gray-500">
+            Not a Member?
+            <span className="text-black underline cursor-pointer">
+              <Link href="./join-us"> Join Us.</Link>
+            </span>
           </p>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
